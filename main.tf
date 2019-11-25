@@ -92,7 +92,7 @@ resource "azurerm_subnet" "main" {
   service_endpoints = local.subnets_delegations[count.index].service_endpoints
 
   lifecycle {
-    ignore_changes = ["network_security_group_id", "route_table_id"]
+    ignore_changes = [network_security_group_id, route_table_id]
   }
 }
 
