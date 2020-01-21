@@ -27,3 +27,9 @@ variable "subnets" {
   type        = any
   description = "List of subnets."
 }
+
+variable "tags" {
+  type        = map(string)
+  description = "A map of custom tags to use on the resources that are deployed with this module."
+  default     = {}
+}

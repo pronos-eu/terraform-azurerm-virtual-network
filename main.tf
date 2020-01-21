@@ -66,6 +66,7 @@ resource "azurerm_virtual_network" "main" {
   address_space       = var.address_space
   location            = coalesce(var.location, data.azurerm_resource_group.main.location)
   dns_servers         = var.dns_servers
+  tags                = var.tags
 }
 
 resource "azurerm_subnet" "main" {
